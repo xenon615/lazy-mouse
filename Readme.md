@@ -18,5 +18,9 @@ On Flutter it's all kind of out of the box.
 Very simple synchronous with use  of tungstenite 
 ### Client
 ![screen](img/image.png)
+Controls (Top to bottom)  
+1) Ip Addess of mmy computer  
+2) "Touchpad"  
+3) "Mouse Whell"
 
 

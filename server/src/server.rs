@@ -29,7 +29,6 @@ impl Server {
         let addr = format!("0.0.0.0:{}", port);
         let listener = TcpListener::bind(addr).unwrap();
         for stream in listener.incoming() {
-            println!("connect");
             let mut websocket = accept(stream.unwrap()).unwrap();
             loop {
                 let r = websocket.read();
@@ -46,7 +45,6 @@ impl Server {
 
     fn command(&self, message: Message) {
         let command = message.to_string();
-        println!("{}", command);
         if let Some((axis, value_str)) =  command.split_once(':') {
             let xy = value_str.split(',').map(|v| v.parse::<f32>().unwrap_or(0.0) * 2.).collect::<Vec<f32>>();
             let _ = match axis {
