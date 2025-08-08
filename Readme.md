@@ -17,7 +17,7 @@ On Flutter it's all kind of out of the box.
 ### Server
 Very simple synchronous WebSocket server with use of tungstenite 
 ### Client
-Android app  
+Android app (Dioxus 0.7.0-alfa.3)  
 <img src="img/image.png" style="width:25%"> 
 
 Controls (Top to bottom)  
