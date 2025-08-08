@@ -17,9 +17,10 @@ On Flutter it's all kind of out of the box.
 ### Server
 Very simple synchronous with use  of tungstenite 
 ### Client
-![screen](img/image.png)
+<img src="img/image.png" style="width:50%"> 
+
 Controls (Top to bottom)  
-1) Ip Addess of mmy computer  
+1) Ip Addess of my computer  
 2) "Touchpad"  
 3) "Mouse Whell"
 
