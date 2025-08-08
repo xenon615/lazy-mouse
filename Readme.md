@@ -23,6 +23,6 @@ Android app
 Controls (Top to bottom)  
 1) Ip Addess of my computer  
 2) "Touchpad"  
-3) "Mouse Whell"
+3) "Mouse Wheel"
 
 
