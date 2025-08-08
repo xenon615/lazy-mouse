@@ -1,0 +1,90 @@
+:root {
+  --theme-element-color: yellowgreen;
+  --theme-element-bg: #1d2721;
+  --theme-element-pad: #324242;
+}
+
+html, body {
+    background-color: var(--theme-element-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    & div {
+        padding: 10px;
+        display: flex;
+    }
+}
+.ip {
+    flex: 0 1 10%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    border-color: inherit;
+    &  div {
+        margin: 5px 0px;
+    }
+    & input {
+        font-size: 2em;
+        background-color: inherit;
+        border-radius: 10px;
+        color: var(--theme-element-color);
+        background-color: var(--theme-element-pad);
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+    & button {
+        background-color: inherit;
+        color: var(--theme-element-bg); 
+        border-radius: 10px;
+        border: none;
+        outline: none;;
+    }
+}
+
+.coordinates {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.value {
+    flex: 0 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* background-color: beige; */
+}
+
+.pad {
+    background-color: var(--theme-element-pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 0 100%;
+    border-radius: 10px;
+    /* background-color: var(--theme-element-bg); */
+}
+
+.debug {
+    background-color: rgb(19, 150, 121);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 30%;
+} 
+
+.icon {
+    color: var(--theme-element-color);
+    width: 20%;
+}
