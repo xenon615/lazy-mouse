@@ -11,8 +11,9 @@ dioxus = { version = "0.7.3", features = [] }
 
 # tracing ={ version = "*"}
 tungstenite = "0.28.0"
-async-std = "1.13.2"
-# smol = "*"
+# async-std = "1.13.2"
+
+smol = "*"
 
 # dioxus-free-icons = { version = "0.9", features = ["font-awesome-brands"] }
 dioxus-free-icons = {git = "https://github.com/dioxus-community/dioxus-free-icons.git", branch = "main", features = [

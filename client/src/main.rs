@@ -1,6 +1,8 @@
 use dioxus::{prelude::*};
 use tungstenite::connect;
-use async_std::stream::StreamExt;
+// use async_std::stream::StreamExt;
+use smol::stream::StreamExt;
+
 
 // use dioxus_free_icons::{
 //     icons::fa_solid_icons::{
