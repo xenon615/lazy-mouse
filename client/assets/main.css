@@ -1,5 +1,5 @@
 :root {
-  --theme-element-color: yellowgreen;
+  --theme-element-color: rgb(16, 201, 32);
   --theme-element-bg: #1d2721;
   --theme-element-pad: #324242;
 }
@@ -44,10 +44,9 @@ html, body {
     }
     & button {
         background-color: inherit;
-        color: var(--theme-element-bg); 
         border-radius: 10px;
         border: none;
-        outline: none;;
+        outline: none;
     }
 }
 
@@ -86,5 +85,7 @@ html, body {
 
 .icon {
     color: var(--theme-element-color);
-    width: 20%;
+    /* width: 20%; */
+    width: 50px;
+    height: auto;
 }

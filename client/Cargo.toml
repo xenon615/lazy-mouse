@@ -1,5 +1,5 @@
 [package]
-name = "r-mouse"
+name = "lazy-mouse-client"
 version = "0.1.0"
 edition = "2024"
 
@@ -7,11 +7,13 @@ edition = "2024"
 
 [dependencies]
 
-dioxus = { version = "0.7.0-alpha.3", features = [] }
+dioxus = { version = "0.7.3", features = [] }
 
 # tracing ={ version = "*"}
-tungstenite = "0.27.0"
-async-std = "1.13.1"
+tungstenite = "0.28.0"
+async-std = "1.13.2"
+# smol = "*"
+
 # dioxus-free-icons = { version = "0.9", features = ["font-awesome-brands"] }
 dioxus-free-icons = {git = "https://github.com/dioxus-community/dioxus-free-icons.git", branch = "main", features = [
     "material-design-icons-content", "material-design-icons-hardware", "material-design-icons-action"

@@ -18,19 +18,14 @@ use dioxus_free_icons:: {
     }
 };
 
-
-
-
-
-
 const MAIN_CSS:Asset =  asset!("/assets/main.css");
 const NORMALIZE_CSS:Asset =  asset!("/assets/normalize.css");
 const FAVICON: Asset = asset!("/assets/favicon.ico");
 
 static CONNECTED: GlobalSignal<bool> = Signal::global(|| false);
-static IP_ADDR: GlobalSignal<String> = Signal::global(|| "192.168.1.2".to_string());
+static IP_ADDR: GlobalSignal<String> = Signal::global(|| "192.168.1.21".to_string());
 static MOVE_START: GlobalSignal<(f64, f64)> = Signal::global(|| (0., 0.));
-static DEBUG_DATA: GlobalSignal<String> = Signal::global(|| "adasdasd".to_string());
+static DEBUG_DATA: GlobalSignal<String> = Signal::global(|| "---".to_string());
 
 fn main() {
     dioxus::launch(App);

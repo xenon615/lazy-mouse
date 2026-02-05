@@ -1,9 +1,12 @@
 [package]
-name = "remote-mouse"
+name = "lazy-mouse-server"
 version = "0.1.0"
 edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-tungstenite = "0.27.0"
-mouce = "0.3.0"
+tungstenite = "0.28.0"
+enigo = "*"
+winit = "0.30"
+trayicon = "*"
+local-ip-address= "*"
