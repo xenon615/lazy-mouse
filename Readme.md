@@ -13,11 +13,13 @@ which led me to a very simple solution, then I would probably give up everything
 
 On Flutter it's all kind of out of the box.
 
+And then I moved to Linux (Fedora) and there are no problems with SSL there.
+
 ## Very short description  
 ### Server
 Very simple synchronous WebSocket server with use of tungstenite 
 ### Client
-Android app (Dioxus 0.7.0-alpha.3)  
+Android app (Dioxus 0.7.3)  
 <img src="img/image.png" style="width:25%"> 
 
 Controls (Top to bottom)  
