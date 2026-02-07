@@ -21,10 +21,9 @@ Very simple synchronous WebSocket server with use of tungstenite
 ### Client
 Android app (Dioxus 0.7.3)  
 <img src="img/image.png" style="width:25%"> 
-
+The server address is determined automatically
 Controls (Top to bottom)  
-1) Ip Addess of my computer  
-2) "Touchpad"  
-3) "Mouse Wheel"
+1) "Touchpad"  
+2) "Mouse Wheel"
 
 

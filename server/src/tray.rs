@@ -15,8 +15,6 @@ pub fn create_window(event_loop: EventLoop<UserEvents>) {
     let proxy = event_loop.create_proxy();
     let icon_idle = Icon::from_buffer(include_bytes!("../assets/icon-idle.ico"), None, None).unwrap()  ;
     let icon_connected = Icon::from_buffer(include_bytes!("../assets/icon-connected.ico"), None, None).unwrap()  ;
-    
-    
 
     let tray_icon = TrayIconBuilder::new()
         .sender(move |e: &UserEvents| {

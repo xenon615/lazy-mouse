@@ -1,12 +1,10 @@
 use std::{
-    net::TcpListener, thread::sleep, time::Duration
+    net::{TcpListener, UdpSocket}, thread::{sleep, spawn}, time::Duration
 };
 use enigo::Button;
 use tungstenite::{accept, Message};
-
 use enigo::{Enigo, Mouse, Settings, Direction::Click};
 use winit::event_loop::EventLoopProxy;
-
 use crate::UserEvents;
 
 pub struct Server {
@@ -14,6 +12,10 @@ pub struct Server {
     port: u16,
     proxy: EventLoopProxy<UserEvents>
 }
+
+const PORT: u32 = 1717;
+const D_REQUEST: &str = "LMDISCOVER";
+
 
 // ---
 
@@ -27,11 +29,32 @@ impl Server {
     }
 
     // ---
+    
+    fn discover() -> std::io::Result<()>{
+        let socket = UdpSocket::bind(format!("0.0.0.0:{PORT}"))?;
+        let mut buf = [0; 20];
+        loop {
+            match socket.recv_from(&mut buf)  {
+                Ok((size, addr)) =>  {
+                    let message = String::from_utf8_lossy(&buf[..size]);
+                    if message == D_REQUEST.to_string() {
+                        let resp = D_REQUEST.chars().rev().collect::<String>();
+                        socket.send_to(resp.as_bytes(), addr)?;
+                        // return Ok(());
+                    }
+                }
+                Err(e) => return Err(e) 
+            }
+        }
+    }
+
+    // ---
 
     pub fn start(&mut self) {
         let addr = format!("0.0.0.0:{}", self.port);
         let listener = TcpListener::bind(addr).unwrap();
-
+        spawn(move || Self::discover().unwrap());
+        
         for stream in listener.incoming() {
             let mut websocket = accept(stream.unwrap()).unwrap();
             self.proxy.send_event(UserEvents::SetConnected).unwrap();
